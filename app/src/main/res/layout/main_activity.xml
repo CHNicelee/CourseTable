@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/layoutWeek"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="第15周"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/login_text_size" />
+            <ImageView
+                android:id="@+id/imageArrow"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/down"
+                android:layout_width="15dp"
+                android:layout_height="15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textTerm"
+            android:textColor="@color/colorPrimary"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/layoutWeek"
+            android:text="大三 第一学期"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/layoutWeekWrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/settingNowWeek"
+                android:drawableTop="@drawable/modify"
+                android:textColor="#000"
+                android:gravity="center"
+                android:text="修改当前周"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_left"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="@dimen/leftGridWidth"
+            android:layout_height="@dimen/weekHeight">
+            <TextView
+                android:gravity="center"
+                android:text="时"
+                android:layout_gravity="center"
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:id="@+id/bottom"
+                android:text="间"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@id/top_left"
+            android:id="@+id/top_week"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/weekHeight"
+            android:orientation="horizontal"
+            >
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@id/top_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/left_time"
+                    android:layout_width="@dimen/leftGridWidth"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+
+                <csu.edu.ice.coursetable.widget.CourseLayout
+                    android:id="@+id/courseLayout"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></csu.edu.ice.coursetable.widget.CourseLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
